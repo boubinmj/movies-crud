@@ -15,7 +15,19 @@ execute_clear_dictionary = APScheduler()
 # Homepage
 @app.route("/")
 def crud_page():
-    return render_template("/index.html")
+    return render_template("/home.html")
+
+@app.route("/about/")
+def about():
+    return render_template("/about.html")
+
+@app.route("/home/")
+def home():
+    return render_template("/home.html")
+
+@app.route("/contact/")
+def contact():
+    return render_template("/contact.html")
 
 def clear_dictionary():
     os.remove("dictionary_file.pkl")

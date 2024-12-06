@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<center>
+    <h1>
+        CRUD Application
+    </h1>
+</center>
+
+<center>
+    <text>
+        Welcome to the CRUD application. To get started, choose a CRUD operation
+    </text>
+</center>
+
+    <h3>
+        <center>
+            <button onclick="window.location.replace('post_elements')">POST</button>
+
+            <button onclick="window.location.replace('get_page')">GET</button>
+
+            <button onclick="window.location.replace('put_elements')">PUT</button>
+
+            <button onclick="window.location.replace('delete_page')">DELETE</button>
+        </center>
+    </h3>
+{% endblock %}
