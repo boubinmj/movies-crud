@@ -29,11 +29,14 @@ def home():
 def contact():
     return render_template("/contact.html")
 
-@app.route('/get_page')
+@app.route('/get_page', methods=['GET'])
 def get_page():
-    with open('db/data.json', 'r') as f:
-        resp = json.load(f)
-        return json.dumps(resp, indent=4)
+    if request.method == 'GET':
+        with open('db/data.json', 'r') as f:
+            resp = json.load(f)
+            return json.dumps(resp, indent=4)
+    else:
+        return render_template('/home.html')
 
 def clear_dictionary():
     os.remove("dictionary_file.pkl")
