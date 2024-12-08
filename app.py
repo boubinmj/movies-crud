@@ -34,7 +34,8 @@ def get_page():
     if request.method == 'GET':
         with open('db/data.json', 'r') as f:
             resp = json.load(f)
-            return json.dumps(resp, indent=4)
+            data = json.dumps(resp, indent=4)
+            return render_template('/home.html', data=data)
     else:
         return render_template('/home.html')
 

@@ -14,7 +14,6 @@ Home
         Welcome to the CRUD application. To get started, choose a CRUD operation
     </text>
 </center>
-
     <h3>
         <center>
             <button onclick="window.location.replace('post_elements')">POST</button>
@@ -25,5 +24,10 @@ Home
 
             <button onclick="window.location.replace('delete_page')">DELETE</button>
         </center>
+        <div>
+            <h2>Data:</h2>
+            <pre>{{ data }}</pre>
+        </div>
+    
     </h3>
 {% endblock %}
